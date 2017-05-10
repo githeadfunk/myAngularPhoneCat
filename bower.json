@@ -1,0 +1,23 @@
+{
+  "name": "AngularPhoneCatMy",
+  "authors": [
+    "githeadfunk <wyh388@gmail.com>"
+  ],
+  "description": "This is my phonecat app",
+  "main": "app/index.html",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-mocks": "1.5.x",
+    "bootstrap": "3.3.x"
+  }
+}

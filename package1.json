@@ -1,0 +1,19 @@
+{
+  "name": "angularphonecatmy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+	"start": "http-server ./app -a localhost -p 8000 -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/githeadfunk/myAngularPhoneCat.git"
+  },
+  "author": "wyh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/githeadfunk/myAngularPhoneCat/issues"
+  },
+  "homepage": "https://github.com/githeadfunk/myAngularPhoneCat#readme"
+}
