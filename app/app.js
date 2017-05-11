@@ -4,7 +4,18 @@ var myapp = angular.module('myphonecatapp', []);
 
 myapp.controller("PhoneListController", function($scope){
     
-    $scope.phones = [
+   
+});
+
+myapp.component("phoneList", {
+    template: '<ul>' +
+                  '<li ng-repeat="phone in $ctrl.phones">' +
+                    '<span>{{phone.name}}</span>' +
+                    '<p>{{phone.snippet}}</p>' +
+                  '</li>' +
+              '</ul>',
+    controller: function PhoneListController(){
+        this.phones = [
         {
             name: "Nexus S",
             snippet: "Fast"
@@ -18,4 +29,5 @@ myapp.controller("PhoneListController", function($scope){
             snippet: 'The Next, Next Generation tablet.'
         }
     ];
+    }
 });

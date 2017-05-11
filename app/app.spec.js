@@ -1,14 +1,15 @@
 'use strict';
 
-describe('PhoneListController', function() {
+describe('phoneList', function() {
 
   beforeEach(module('myphonecatapp'));
 
-  it('should create a `phones` model with 3 phones', inject(function($controller) {
-    var scope = {};
-    var ctrl = $controller('PhoneListController', {$scope: scope});
-
-    expect(scope.phones.length).toBe(3);  
-  }));
+  describe('PhoneListController', function(){
+      
+      it("should create a 'phones' model with 3 phones", inject(function($componentController){
+          var ctrl = $componentController('phoneList');
+          expect(ctrl.phones.length).toBe(3);
+      }));
+  });
 
 });
