@@ -2,7 +2,7 @@
 
 describe('phoneList', function() {
 
-  beforeEach(module('myphonecatapp'));
+  beforeEach(module('phoneList'));
 
   describe('PhoneListController', function(){
       
