@@ -6,16 +6,20 @@ angular.module('phoneList').component('phoneList',{
         this.phones = [
         {
             name: "Nexus S",
-            snippet: "Fast"
+            snippet: "Fast",
+            age: '1'
         },
         {
             name: 'Motorola XOOM™ with Wi-Fi',
-            snippet: 'The Next, Next Generation tablet.'
+            snippet: 'The Next, Next Generation tablet.',
+            age: '2'
         },
         {
             name: 'MOTOROLA XOOM™',
-            snippet: 'The Next, Next Generation tablet.'
+            snippet: 'The Next, Next Generation tablet.',
+            age: '3'
         }
     ];
+//        this.order = 'age';
     }
 });
