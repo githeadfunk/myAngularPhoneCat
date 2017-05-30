@@ -29,4 +29,11 @@
     <span>Additional Features</span>
     <dd>{{$ctrl.phone.additionalFeatures}}</dd>
   </li>
+    <img ng-src="{{$ctrl.mainImageUrl}}" class="phone" />
+    ...
+    <ul class="phone-thumbs">
+      <li ng-repeat="img in $ctrl.phone.images">
+        <img ng-src="{{img}}" ng-click="$ctrl.setImage(img)" />
+      </li>
+    </ul>
 </ul>
