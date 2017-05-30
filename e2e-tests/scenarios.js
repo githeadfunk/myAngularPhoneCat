@@ -1,4 +1,3 @@
-//var browserLogs = require('protractor-browser-logs');
 
 describe('PhoneCat Application', function() {
 
@@ -7,17 +6,23 @@ describe('PhoneCat Application', function() {
     var logs;  
     beforeEach(function() {
         browser.get('index.html');
-//        logs = browserLogs(browser);
-//        logs.ignore(logs.DEBUG);
-//        logs.ignore(logs.INFO);
     });
       
-    it('should render phone specific links', function() {
-        var query = element(by.model('$ctrl.query'));
-        query.sendKeys('nexus');
+    it('should redirect `index.html` to `index.html#!/phones', function() {
+      browser.get('index.html');
+      expect(browser.getLocationAbsUrl()).toBe('/phones');
+    });
+    
+    describe('View: Phone details', function() {
 
-        element.all(by.css('.phones li a')).first().click();
-        expect(browser.getLocationAbsUrl()).toBe('/phones/nexus-s');
+      beforeEach(function() {
+        browser.get('index.html#!/phones/nexus-s');
+      });
+
+      it('should display placeholder page with `phoneId`', function() {
+        expect(element(by.binding('$ctrl.phoneId')).getText()).toBe('nexus-s');
+      });
+
     });
 //      it('should be able to ordered by name and age', function() {
 //

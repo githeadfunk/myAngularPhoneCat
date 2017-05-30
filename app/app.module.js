@@ -1,3 +1,3 @@
 'use strict'
 
-var myapp = angular.module('myphonecatapp', ['phoneList']);
+var myapp = angular.module('myphonecatapp', ['ngRoute','phoneDetail','phoneList']);
